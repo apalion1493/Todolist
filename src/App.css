@@ -11,3 +11,24 @@
   border: 1px solid blue;
   padding: 10px;
 }
+
+.todolist__wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+}
+
+.active-filter {
+  background-color: aquamarine;
+}
+
+.isDone {
+  opacity: 0.2;
+}

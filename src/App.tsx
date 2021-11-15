@@ -20,9 +20,16 @@ function App() {
         {id: v1(), title: 'Redux', isDone: false}
     ]);
 
-    console.log(tasks)
-
     let [filter, setFilter] = useState<FilterValuesType>('all');
+
+    function changeStatus(taskId: string, isDone: boolean) {
+        let task = tasks.find(t => t.id === taskId);
+        if (task) {
+            task.isDone = isDone;
+        }
+        let copy = [...tasks];
+        setTasks(copy);
+    }
 
     function removeTask(id: string) {
         let filteredTasks = tasks.filter( t => t.id !== id);
@@ -44,6 +51,7 @@ function App() {
     }
 
     let tasksForTodolist = tasks;
+
     if(filter === 'completed') {
         tasksForTodolist = tasks.filter(t => t.isDone)
     }
@@ -54,7 +62,7 @@ function App() {
 
     return (
         <div className="App">
-            <Todolist changeFilter={changeFilter} addTask={addTask} removeTask={removeTask} tasks={tasksForTodolist} title={"What to learn"}/>
+            <Todolist changeTaskStatus={changeStatus} changeFilter={changeFilter} addTask={addTask} removeTask={removeTask} tasks={tasksForTodolist} filter={filter} title={"What to learn"}/>
         </div>
     );
 }
