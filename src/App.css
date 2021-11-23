@@ -1,15 +1,16 @@
-.App {
-  padding: 30px;
-  display: flex;
-}
+/*.App {*/
+/*  padding: 30px;*/
+/*  display: flex;*/
+/*}*/
 
-.App > div {
-  margin-right: 50px;
-}
+/*.App > div {*/
+/*  margin-right: 50px;*/
+/*}*/
 
 .todolist {
-  border: 1px solid blue;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .todolist__wrapper {
@@ -17,18 +18,18 @@
   align-items: flex-start;
 }
 
-.error {
-  border: 1px solid red;
-}
+/*.error {*/
+/*  border: 1px solid red;*/
+/*}*/
 
-.error-message {
-  color: red;
-}
+/*.error-message {*/
+/*  color: red;*/
+/*}*/
 
-.active-filter {
-  background-color: aquamarine;
-}
+/*.active-filter {*/
+/*  background-color: aquamarine;*/
+/*}*/
 
-.isDone {
-  opacity: 0.2;
-}
+/*.isDone {*/
+/*  opacity: 0.2;*/
+/*}*/
